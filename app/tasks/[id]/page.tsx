@@ -1,0 +1,3 @@
+import { tasks } from '@/lib/mock-data';
+import Link from 'next/link';
+export default async function TaskDetail({params}:{params:Promise<{id:string}>}){const {id}=await params; const task=tasks.find(t=>t.id===id); if(!task) return <div>Nicht gefunden</div>; return <div className='space-y-4'><h2 className='text-2xl font-semibold'>{task.title}</h2><p>{task.statement}</p><p className='text-sm'>{task.topic} • {task.difficulty}</p><Link href={`/practice/${task.id}`} className='rounded bg-slate-900 text-white px-3 py-2 inline-block'>Im Lernmodus bearbeiten</Link><div className='rounded border p-4 bg-white'>Whiteboard (MVP Platzhalter JSON-Speicher)</div></div>}

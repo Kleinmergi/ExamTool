@@ -1,0 +1,1 @@
+export default function ExamMode(){return <div className='space-y-3'><h2 className='text-2xl font-semibold'>Prüfungsmodus</h2><p>Zufällige Aufgaben zusammenstellen, Timer starten, am Ende Selbstbewertung.</p></div>}

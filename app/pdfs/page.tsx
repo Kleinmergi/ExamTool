@@ -1,0 +1,2 @@
+import { pdfs } from '@/lib/mock-data';
+export default function Pdfs(){return <div><h2 className='text-2xl font-semibold mb-4'>PDFs</h2><input type='file' className='mb-4'/><div className='space-y-2'>{pdfs.map(p=><div key={p.id} className='rounded border bg-white p-3'>{p.title} ({p.exam_year})</div>)}</div><button className='mt-4 rounded border px-3 py-2'>Aufgaben automatisch extrahieren (Mock)</button></div>}
