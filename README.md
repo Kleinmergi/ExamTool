@@ -29,7 +29,7 @@ Enthält 12 Aufgaben, 8 Theorie-Seiten, 5 Videos, 3 PDFs sowie Review-Daten in `
 
 ## CI (GitHub Actions)
 Diese Repo enthält eine CI-Pipeline unter `.github/workflows/ci.yml`, die bei Push und Pull Requests automatisch ausführt:
-- `npm ci`
+- `npm install`
 - `npm run lint`
 - `npm run build`
 
