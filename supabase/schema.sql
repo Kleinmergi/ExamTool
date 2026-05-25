@@ -1,0 +1,5 @@
+-- Core schema for Exam OS MVP
+create table if not exists user_profiles(id uuid primary key, email text, display_name text, created_at timestamptz default now());
+create table if not exists pdf_documents(id uuid primary key, user_id uuid, title text, file_url text, storage_path text, subject_area text, exam_year int, exam_season text, exam_number text, page_count int, parsed_text text, created_at timestamptz default now(), updated_at timestamptz default now());
+create table if not exists tasks(id uuid primary key, user_id uuid, pdf_document_id uuid null, title text, statement text, subject_area text, topic text, subtopic text null, exam_year int null, exam_season text null, exam_number text null, points int null, difficulty text, status text, page_start int null, page_end int null, tags text[], created_at timestamptz default now(), updated_at timestamptz default now());
+-- (remaining tables follow same model: solutions, practice_attempts, review_schedules, theory_pages, links, videos, whiteboards, flashcards)

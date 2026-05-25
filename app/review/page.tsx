@@ -1,0 +1,1 @@
+import { schedules } from '@/lib/mock-data'; export default function Review(){return <div><h2 className='text-2xl font-semibold mb-4'>Wiederholen</h2>{schedules.map(s=><div key={s.id} className='rounded border bg-white p-3 mb-2'>Task {s.task_id}: nächstes Review {s.next_review_at.slice(0,10)}</div>)}</div>}
